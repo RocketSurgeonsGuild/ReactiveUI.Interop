@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Rocket.Surgery.ReactiveUI.Interop.Core</AssemblyName>
+    <RootNamespace>Rocket.Surgery.ReactiveUI.Interop.Core</RootNamespace>
+  </PropertyGroup>
+
+</Project>

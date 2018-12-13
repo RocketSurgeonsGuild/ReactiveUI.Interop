@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Rocket.Surgery.ReactiveUI.Interop.Prism</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Core" Version="7.1.*" />
+    <PackageReference Include="ReactiveUI" Version="8.*" />
+  </ItemGroup>
+
+</Project>
