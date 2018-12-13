@@ -1,0 +1,13 @@
+<Project>
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Common.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <IsPackable>true</IsPackable>
+        <RootNamespace>$(MSBuildProjectName.Replace('.Extensions', ''))</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Rocket.Surgery.Build.Metadata" />
+        <PackageReference Include="SourceLink.Create.CommandLine" />
+		<PackageReference Include="SourceLink.Copy.PdbFiles" />
+    </ItemGroup>
+</Project>

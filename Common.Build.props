@@ -1,0 +1,9 @@
+<Project>
+    <PropertyGroup>
+        <Company>Rocket Surgeons Guild</Company>
+        <Copyright>Copyright Rodney Littles, II © 2018</Copyright>
+        <Authors>RLitlesII</Authors>
+        <LangVersion>latest</LangVersion>
+        <PackageIconUrl>https://i.imgur.com/7WDbqSy.png</PackageIconUrl>
+    </PropertyGroup>
+</Project>
