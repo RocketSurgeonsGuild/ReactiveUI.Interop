@@ -1,22 +1,7 @@
-branches:
-  main:
-    mode: ContinuousDelivery
-    tag:
-    increment: Patch
-    prevent-increment-of-merged-branch-version: true
-    track-merge-target: false
-  dev(elop)?(ment)?$:
-    mode: ContinuousDeployment
-    tag: beta
-    increment: Minor
-    prevent-increment-of-merged-branch-version: false
-    track-merge-target: true
-  feature[/-]:
-    mode: ContinuousDeployment
-    tag: useBranchName
-    increment: Minor
-    prevent-increment-of-merged-branch-version: false
-    track-merge-target: false
+assembly-versioning-scheme: MajorMinorPatch
+mode: ContinuousDeployment
+continuous-delivery-fallback-tag: beta
+next-version: 0.1.0
+branches: {}
 ignore:
-  sha:
-    - 2a4757b270f7946122ba6622e3d2e72b2b2808a7
+  sha: []
