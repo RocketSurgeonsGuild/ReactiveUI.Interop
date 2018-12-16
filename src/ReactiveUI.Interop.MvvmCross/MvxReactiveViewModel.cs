@@ -40,7 +40,7 @@ namespace ReactiveUI.Interop.MvvmCross
         }
 
         /// <inheritdoc />
-        public void RaisePropertyChanged(PropertyChangedEventArgs args)
+        public new void RaisePropertyChanged(PropertyChangedEventArgs args)
         {
             _reactiveObj.RaisePropertyChanged(args.PropertyName);
         }

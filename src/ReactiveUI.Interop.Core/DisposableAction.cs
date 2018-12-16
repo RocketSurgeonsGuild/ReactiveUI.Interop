@@ -2,6 +2,10 @@
 
 namespace ReactiveUI.Interop.Core
 {
+    /// <summary>
+    /// Object that represents an action that will dispose after use.
+    /// </summary>
+    /// <seealso cref="IDisposable" />
     public class DisposableAction : IDisposable
     {
         private readonly Action _action;
@@ -15,7 +19,7 @@ namespace ReactiveUI.Interop.Core
             _action = action;
         }
 
-        /// <inheritdoc />
+        /// <inheritdoc />.
         public void Dispose()
         {
             _action();
