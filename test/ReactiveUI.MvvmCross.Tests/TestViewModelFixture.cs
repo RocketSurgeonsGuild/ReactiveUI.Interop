@@ -1,7 +1,7 @@
 using System;
 using System.Reactive;
 using System.Reactive.Linq;
-using ReactiveUI.Interop.MvvmCross;
+using Rocket.Surgery.ReactiveUI.Interop.MvvmCross;
 
 namespace ReactiveUI.MvvmCross.Tests
 {

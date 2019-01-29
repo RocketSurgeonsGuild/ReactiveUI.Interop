@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BD8E7E11-B44
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FD1339CF-82BE-4CCC-AE7A-8A410A1C0B02}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactiveUI.Interop.Core", "src\ReactiveUI.Interop.Core\ReactiveUI.Interop.Core.csproj", "{F2D2A50F-F982-4D14-B8D5-BFAD621B74E8}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactiveUI.Interop.FreshMvvm", "src\ReactiveUI.Interop.FreshMvvm\ReactiveUI.Interop.FreshMvvm.csproj", "{7B62CFEF-1FA0-442D-B7F6-1622656BE516}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactiveUI.Interop.MvvmCross", "src\ReactiveUI.Interop.MvvmCross\ReactiveUI.Interop.MvvmCross.csproj", "{5B828C7F-6570-4032-B563-017815437B6D}"
@@ -44,10 +42,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F2D2A50F-F982-4D14-B8D5-BFAD621B74E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2D2A50F-F982-4D14-B8D5-BFAD621B74E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2D2A50F-F982-4D14-B8D5-BFAD621B74E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2D2A50F-F982-4D14-B8D5-BFAD621B74E8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7B62CFEF-1FA0-442D-B7F6-1622656BE516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7B62CFEF-1FA0-442D-B7F6-1622656BE516}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B62CFEF-1FA0-442D-B7F6-1622656BE516}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -77,7 +71,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F2D2A50F-F982-4D14-B8D5-BFAD621B74E8} = {BD8E7E11-B447-4CBA-B0BE-193408DC635F}
 		{7B62CFEF-1FA0-442D-B7F6-1622656BE516} = {BD8E7E11-B447-4CBA-B0BE-193408DC635F}
 		{5B828C7F-6570-4032-B563-017815437B6D} = {BD8E7E11-B447-4CBA-B0BE-193408DC635F}
 		{E15AE3A9-7EA3-403A-981D-AE1C73C3A38D} = {BD8E7E11-B447-4CBA-B0BE-193408DC635F}

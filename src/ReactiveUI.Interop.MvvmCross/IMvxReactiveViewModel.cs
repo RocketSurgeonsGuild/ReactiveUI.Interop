@@ -1,6 +1,7 @@
 ﻿using MvvmCross.ViewModels;
+using ReactiveUI;
 
-namespace ReactiveUI.Interop.MvvmCross
+namespace Rocket.Surgery.ReactiveUI.Interop.MvvmCross
 {
     /// <summary>
     /// Interface that represents a MvvmCross ReactiveUI inter operable view model.

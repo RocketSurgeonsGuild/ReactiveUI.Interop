@@ -1,11 +1,13 @@
-﻿using MvvmCross.ViewModels;
-using ReactiveUI.Interop.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using MvvmCross.ViewModels;
+using ReactiveUI;
+using PropertyChangingEventArgs = ReactiveUI.PropertyChangingEventArgs;
+using PropertyChangingEventHandler = ReactiveUI.PropertyChangingEventHandler;
 
-namespace ReactiveUI.Interop.MvvmCross
+namespace Rocket.Surgery.ReactiveUI.Interop.MvvmCross
 {
     /// <summary>
     /// Object that handles inter operability between a MvvmCross and ReactiveUI view model.
@@ -63,7 +65,7 @@ namespace ReactiveUI.Interop.MvvmCross
         {
             var original = storage;
 
-            this.RaiseAndSetIfChanged(ref storage, value, propertyName);
+            IReactiveObjectExtensions.RaiseAndSetIfChanged(this, ref storage, value, propertyName);
 
             return !EqualityComparer<T>.Default.Equals(original, value);
         }

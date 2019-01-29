@@ -1,6 +1,7 @@
 ﻿using Prism.Navigation;
+using ReactiveUI;
 
-namespace ReactiveUI.Interop.Prism
+namespace Rocket.Surgery.ReactiveUI.Interop.Prism
 {
     /// <summary>
     /// Interface that represents a Prism ReactiveUI inter operable view model.

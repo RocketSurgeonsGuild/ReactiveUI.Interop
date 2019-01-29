@@ -2,7 +2,6 @@
 using System.Reactive;
 using System.Reactive.Linq;
 using FluentAssertions;
-using FreshMvvm.ReactiveUI.Interop;
 using Xunit;
 
 namespace ReactiveUI.FreshMvvm.Tests
@@ -60,7 +59,7 @@ namespace ReactiveUI.FreshMvvm.Tests
                 });
 
                 // When
-                sut.Name = "Hello World!";
+                sut.Name = "name";
 
                 // Then
                 actual.Should().BeTrue();

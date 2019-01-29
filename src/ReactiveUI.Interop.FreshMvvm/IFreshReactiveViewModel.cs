@@ -1,6 +1,7 @@
-﻿using ReactiveUI;
+﻿using System.ComponentModel;
+using ReactiveUI;
 
-namespace FreshMvvm.ReactiveUI.Interop
+namespace Rocket.Surgery.ReactiveUI.Interop.FreshMvvm
 {
     /// <summary>
     /// Interface that represents a FreshMvvm ReactiveUI inter operable view model.
@@ -10,7 +11,8 @@ namespace FreshMvvm.ReactiveUI.Interop
     /// <seealso cref="IHandleObservableErrors" />
     public interface IFreshReactiveViewModel : IReactiveNotifyPropertyChanged<IReactiveObject>,
         IReactiveObject,
-        IHandleObservableErrors
+        IHandleObservableErrors,
+        INotifyPropertyChanged
     {
     }
 }

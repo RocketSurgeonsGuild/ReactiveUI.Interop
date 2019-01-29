@@ -1,60 +1,59 @@
-﻿using ReactiveUI;
-using ReactiveUI.Interop.Core;
-using System;
+﻿using System;
 using System.ComponentModel;
+using FreshMvvm;
+using ReactiveUI;
 using PropertyChangingEventArgs = ReactiveUI.PropertyChangingEventArgs;
 using PropertyChangingEventHandler = ReactiveUI.PropertyChangingEventHandler;
 
-namespace FreshMvvm.ReactiveUI.Interop
+namespace Rocket.Surgery.ReactiveUI.Interop.FreshMvvm
 {
     /// <summary>
     /// Object that handles inter operability between a FreshMvvm page model and ReactiveUI view model.
     /// </summary>
-    /// <seealso cref="FreshMvvm.FreshBasePageModel" />
-    /// <seealso cref="FreshMvvm.ReactiveUI.Interop.IFreshReactiveViewModel" />
+    /// <seealso cref="FreshBasePageModel" />
+    /// <seealso cref="IFreshReactiveViewModel" />
     public class FreshReactiveViewModel : FreshBasePageModel, IFreshReactiveViewModel
     {
-        private readonly FreshReactiveObject _freshReactiveObject = new FreshReactiveObject();
+        private readonly FreshReactiveObject _reactiveObject = new FreshReactiveObject();
         private bool _suppressNpc;
 
         /// <inheritdoc />
-        public IObservable<IReactivePropertyChangedEventArgs<IReactiveObject>> Changed => _freshReactiveObject.Changed;
+        public IObservable<IReactivePropertyChangedEventArgs<IReactiveObject>> Changed => _reactiveObject.Changed;
 
         /// <inheritdoc />
         public IObservable<IReactivePropertyChangedEventArgs<IReactiveObject>> Changing =>
-            _freshReactiveObject.Changing;
+            _reactiveObject.Changing;
 
         /// <inheritdoc />
-        public IObservable<Exception> ThrownExceptions => _freshReactiveObject.ThrownExceptions;
+        public IObservable<Exception> ThrownExceptions => _reactiveObject.ThrownExceptions;
 
         /// <inheritdoc />
         public event PropertyChangingEventHandler PropertyChanging
         {
-            add => _freshReactiveObject.PropertyChanging += value;
-            remove => _freshReactiveObject.PropertyChanging -= value;
+            add => _reactiveObject.PropertyChanging += value;
+            remove => _reactiveObject.PropertyChanging -= value;
         }
 
         /// <inheritdoc />
         public void RaisePropertyChanged(PropertyChangedEventArgs args)
         {
-            _freshReactiveObject.RaisePropertyChanged(args.PropertyName);
+            _reactiveObject.RaisePropertyChanged(args.PropertyName);
         }
 
         /// <inheritdoc />
         public void RaisePropertyChanging(PropertyChangingEventArgs args)
         {
-            _freshReactiveObject.RaisePropertyChanging(args.PropertyName);
+            _reactiveObject.RaisePropertyChanging(args.PropertyName);
         }
 
         /// <inheritdoc />
-        public IDisposable SuppressChangeNotifications()
+        public virtual IDisposable SuppressChangeNotifications()
         {
             _suppressNpc = true;
 
-            var suppressor = _freshReactiveObject.SuppressChangeNotifications();
+            var suppressor = _reactiveObject.SuppressChangeNotifications();
 
             return new DisposableAction(() =>
-
             {
                 _suppressNpc = false;
 

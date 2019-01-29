@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ReactiveUI.Interop.Core\ReactiveUI.Interop.Core.csproj" />
     <ProjectReference Include="..\..\src\ReactiveUI.Interop.MvvmCross\ReactiveUI.Interop.MvvmCross.csproj" />
   </ItemGroup>
 

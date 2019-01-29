@@ -5,11 +5,10 @@
     <AssemblyName>Rocket.Surgery.ReactiveUI.Interop.FreshMvvm</AssemblyName>
     <RootNamespace>Rocket.Surgery.ReactiveUI.Interop.FreshMvvm</RootNamespace>
   </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="FreshMvvm" Version="2.2.4" />
     <PackageReference Include="ReactiveUI" Version="8.*" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ReactiveUI.Interop.Core\ReactiveUI.Interop.Core.csproj" />
-  </ItemGroup>
+  
 </Project>

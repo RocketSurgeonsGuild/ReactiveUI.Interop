@@ -57,7 +57,7 @@ namespace ReactiveUI.MvvmCross.Tests
                 });
 
                 // When
-                sut.Name = "Hello World!";
+                sut.Name = "name";
 
                 // Then
                 actual.Should().BeTrue();
