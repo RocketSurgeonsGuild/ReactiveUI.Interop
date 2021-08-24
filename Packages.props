@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ItemGroup>
+    <!-- <GlobalPackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="2.9.8" /> -->
+    <GlobalPackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" />
+    <GlobalPackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" />
+    <GlobalPackageReference Include="Rocket.Surgery.MSBuild.CI" Version="1.1.0" />
+    <GlobalPackageReference Include="Rocket.Surgery.MSBuild.GitVersion" Version="1.1.0" />
+    <GlobalPackageReference Include="Rocket.Surgery.MSBuild.JetBrains.Annotations" Version="1.1.0" Condition="'$(MSBuildProjectName)'!='.build'" />
+    <GlobalPackageReference Include="Rocket.Surgery.MSBuild.Metadata" Version="1.1.0" />
+    <GlobalPackageReference Include="Rocket.Surgery.MSBuild.SourceLink" Version="1.1.0" />
+    <GlobalPackageReference Include="Roslynator.Analyzers" Version="3.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="Buildalyzer" Version="3.2.1" />
+    <PackageReference Update="GitVersion.Tool" Version="5.6.9" />
+    <PackageReference Update="Humanizer.Core" Version="2.10.1" />
+    <PackageReference Update="Nuke.Common" Version="5.2.*" />
+    <PackageReference Update="Rocket.Surgery.Nuke" Version="0.15.1" />
+    <PackageReference Update="ReportGenerator" Version="4.8.8" />
+    <PackageReference Update="YamlDotNet" Version="11.1.1" />
+    <PackageReference Update="JetBrains.ReSharper.GlobalTools" Version="2021.1.2" />
+    <!--        <PackageReference Update="JetBrains.ReSharper.GlobalTools" Version="2020.3.0-eap05"/>-->
+    <PackageReference Update="Microsoft.Build" Version="16.9.0" />
+    <PackageReference Update="Microsoft.Build.Framework" Version="16.9.0" />
+    <PackageReference Update="Microsoft.Build.Tasks.Core" Version="16.9.0" />
+    <PackageReference Update="Microsoft.Build.Utilities.Core" Version="16.9.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="Prism.Core" Version="7.1.0.431" />
+    <PackageReference Update="ReactiveUI" Version="8.*" />
+    <PackageReference Update="MvvmCross" Version="6.*" />
+    <PackageReference Update="FreshMvvm" Version="2.2.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="Bogus" Version="33.0.2" />
+    <PackageReference Update="coverlet.collector" Version="3.0.3" />
+    <PackageReference Update="coverlet.msbuild" Version="3.0.3" IncludeAssets="all" PrivateAssets="runtime;build;native;contentfiles;analyzers" />
+    <PackageReference Update="FakeItEasy" Version="7.0.2" />
+    <PackageReference Update="FakeItEasy.Analyzer.CSharp" Version="6.1.0" />
+    <PackageReference Update="FluentAssertions" Version="5.10.3" />
+    <PackageReference Update="FluentAssertions.Analyzers" Version="0.11.4" />
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Update="Rocket.Surgery.Extensions.Testing.FakeItEasy" Version="6.0.1" />
+    <PackageReference Update="Rocket.Surgery.Extensions.Testing.XUnit" Version="6.0.1" />
+    <PackageReference Update="xunit" Version="2.4.1" />
+    <PackageReference Update="xunit.analyzers" Version="0.10.0" />
+    <PackageReference Update="xunit.runner.visualstudio" Version="2.4.3" />
+  </ItemGroup>
+  <Import Project="$(MSBuildThisFileDirectory)/Packages.support.props" Condition="Exists('$(MSBuildThisFileDirectory)/Packages.support.props')" />
+</Project>

@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MvvmCross" Version="6.*" />
-    <PackageReference Include="ReactiveUI" Version="8.*" />
+    <PackageReference Include="MvvmCross" />
+    <PackageReference Include="ReactiveUI" />
   </ItemGroup>
 
 </Project>
