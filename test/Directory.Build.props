@@ -1,18 +1,7 @@
 <Project>
-    <Import Project="$([MSBuild]::GetPathOfFileAbove('Common.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
     <PropertyGroup>
-        <IsPackable>false</IsPackable>
-        <PreserveCompilationContext>true</PreserveCompilationContext>
-        <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-    </PropertyGroup>
-    <PropertyGroup>
-        <CollectCoverage>true</CollectCoverage>
-        <CoverletOutputFormat>json,lcov,cobertura,opencover</CoverletOutputFormat>
-        <CoverletName>$(MSBuildProjectName.Replace('.', '-'))</CoverletName>
-    </PropertyGroup>
-    <!-- If coverlet is empty or set to the default override -->
-    <PropertyGroup Condition="'$(CoverletOutput)'=='' Or '$(CoverletOutput)'==$([MSBuild]::EnsureTrailingSlash('$(MSBuildProjectDirectory)'))">
-        <CoverletOutput Condition="'$(CoverageDirectory)'==''">$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('Common.Build.props', '$(MSBuildProjectDirectory)'))))/coverage/$(CoverletName)/</CoverletOutput>
-        <CoverletOutput Condition="'$(CoverageDirectory)'!=''">$(CoverageDirectory)/$(CoverletName)</CoverletOutput>
+        <MergeCoverage>true</MergeCoverage>
+        <IncludeTestAssembly>true</IncludeTestAssembly>
     </PropertyGroup>
 </Project>

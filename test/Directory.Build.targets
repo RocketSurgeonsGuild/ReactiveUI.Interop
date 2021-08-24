@@ -1,16 +1,19 @@
 <Project>
     <ItemGroup>
-        <PackageReference Include="Bogus" />
-        <PackageReference Include="coverlet.msbuild" />
-        <PackageReference Include="FluentAssertions" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" />      
-        <PackageReference Include="NSubstitute" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" />
         <PackageReference Include="ReactiveUI" />
-        <PackageReference Include="Rocket.Surgery.Extensions.Testing.Fixtures" />
+        <PackageReference Include="Rocket.Surgery.Extensions.Testing.FakeItEasy" />
+        <PackageReference Include="Rocket.Surgery.Extensions.Testing.XUnit" />
+        <PackageReference Include="Bogus" />
+        <PackageReference Include="coverlet.collector" />
+        <PackageReference Include="coverlet.msbuild" />
+        <PackageReference Include="FakeItEasy" />
+        <PackageReference Include="FakeItEasy.Analyzer.CSharp" />
+        <PackageReference Include="FluentAssertions" />
+        <PackageReference Include="FluentAssertions.Analyzers" />
         <PackageReference Include="xunit" />
+        <PackageReference Include="xunit.analyzers" />
         <PackageReference Include="xunit.runner.visualstudio" />
-        <PackageReference Include="XunitXml.TestLogger" />
-        <DotNetCliToolReference Include="dotnet-xunit" />
     </ItemGroup>
-    <Import Project="$([MSBuild]::GetPathOfFileAbove('Common.Build.targets', '$(MSBuildThisFileDirectory)../'))" />
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.targets', '$(MSBuildThisFileDirectory)../'))" />
 </Project>
