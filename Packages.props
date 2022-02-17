@@ -25,7 +25,7 @@
     <PackageReference Update="Microsoft.Build.Utilities.Core" Version="16.9.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="Prism.Core" Version="7.1.0.431" />
+    <PackageReference Update="Prism.Core" Version="8.1.97" />
     <PackageReference Update="ReactiveUI" Version="8.*" />
     <PackageReference Update="MvvmCross" Version="6.*" />
     <PackageReference Update="FreshMvvm" Version="2.2.4" />
