@@ -12,7 +12,7 @@
     <GlobalPackageReference Include="Roslynator.Analyzers" Version="3.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="Buildalyzer" Version="3.2.1" />
+    <PackageReference Update="Buildalyzer" Version="4.1.4" />
     <PackageReference Update="GitVersion.Tool" Version="5.6.9" />
     <PackageReference Update="Humanizer.Core" Version="2.10.1" />
     <PackageReference Update="Nuke.Common" Version="5.2.*" />
