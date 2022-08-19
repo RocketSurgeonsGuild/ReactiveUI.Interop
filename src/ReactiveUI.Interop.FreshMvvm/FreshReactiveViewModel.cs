@@ -2,8 +2,6 @@
 using System.ComponentModel;
 using FreshMvvm;
 using ReactiveUI;
-using PropertyChangingEventArgs = ReactiveUI.PropertyChangingEventArgs;
-using PropertyChangingEventHandler = ReactiveUI.PropertyChangingEventHandler;
 
 namespace Rocket.Surgery.ReactiveUI.Interop.FreshMvvm
 {
@@ -14,7 +12,7 @@ namespace Rocket.Surgery.ReactiveUI.Interop.FreshMvvm
     /// <seealso cref="IFreshReactiveViewModel" />
     public class FreshReactiveViewModel : FreshBasePageModel, IFreshReactiveViewModel
     {
-        private readonly FreshReactiveObject _reactiveObject = new FreshReactiveObject();
+        private readonly FreshReactiveObject _reactiveObject = new();
         private bool _suppressNpc;
 
         /// <inheritdoc />
@@ -28,23 +26,17 @@ namespace Rocket.Surgery.ReactiveUI.Interop.FreshMvvm
         public IObservable<Exception> ThrownExceptions => _reactiveObject.ThrownExceptions;
 
         /// <inheritdoc />
-        public event PropertyChangingEventHandler PropertyChanging
+        public event PropertyChangingEventHandler? PropertyChanging
         {
             add => _reactiveObject.PropertyChanging += value;
             remove => _reactiveObject.PropertyChanging -= value;
         }
 
         /// <inheritdoc />
-        public void RaisePropertyChanged(PropertyChangedEventArgs args)
-        {
-            _reactiveObject.RaisePropertyChanged(args.PropertyName);
-        }
+        public void RaisePropertyChanged(PropertyChangedEventArgs args) => _reactiveObject.RaisePropertyChanged(args.PropertyName);
 
         /// <inheritdoc />
-        public void RaisePropertyChanging(PropertyChangingEventArgs args)
-        {
-            _reactiveObject.RaisePropertyChanging(args.PropertyName);
-        }
+        public void RaisePropertyChanging(PropertyChangingEventArgs args) => _reactiveObject.RaisePropertyChanging(args.PropertyName);
 
         /// <inheritdoc />
         public virtual IDisposable SuppressChangeNotifications()

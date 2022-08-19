@@ -25,10 +25,10 @@
     <PackageReference Update="Microsoft.Build.Utilities.Core" Version="16.9.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="Prism.Core" Version="7.1.0.431" />
-    <PackageReference Update="ReactiveUI" Version="8.*" />
-    <PackageReference Update="MvvmCross" Version="6.*" />
-    <PackageReference Update="FreshMvvm" Version="2.2.4" />
+    <PackageReference Update="Prism.Core" Version="7.2.*" />
+    <PackageReference Update="ReactiveUI" Version="9.*" />
+    <PackageReference Update="MvvmCross" Version="8.*" />
+    <PackageReference Update="FreshMvvm" Version="4.*" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="Bogus" Version="33.0.2" />

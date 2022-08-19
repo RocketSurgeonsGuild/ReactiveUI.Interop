@@ -14,15 +14,9 @@ namespace Rocket.Surgery.ReactiveUI.Interop.Prism
         /// Initializes a new instance of the <see cref="DisposableAction"/> class.
         /// </summary>
         /// <param name="action">The action.</param>
-        public DisposableAction(Action action)
-        {
-            _action = action;
-        }
+        public DisposableAction(Action action) => _action = action;
 
         /// <inheritdoc />.
-        public void Dispose()
-        {
-            _action();
-        }
+        public void Dispose() => _action();
     }
 }
