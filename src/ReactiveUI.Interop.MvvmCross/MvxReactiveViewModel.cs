@@ -4,8 +4,6 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using MvvmCross.ViewModels;
 using ReactiveUI;
-using PropertyChangingEventArgs = ReactiveUI.PropertyChangingEventArgs;
-using PropertyChangingEventHandler = ReactiveUI.PropertyChangingEventHandler;
 
 namespace Rocket.Surgery.ReactiveUI.Interop.MvvmCross
 {
@@ -14,7 +12,7 @@ namespace Rocket.Surgery.ReactiveUI.Interop.MvvmCross
     /// </summary>
     public class MvxReactiveViewModel : MvxViewModel, IMvxReactiveViewModel
     {
-        private readonly MvxReactiveObject _reactiveObj = new MvxReactiveObject();
+        private readonly MvxReactiveObject _reactiveObj = new();
 
         private bool _suppressNpc;
 
@@ -42,16 +40,10 @@ namespace Rocket.Surgery.ReactiveUI.Interop.MvvmCross
         }
 
         /// <inheritdoc />
-        public new void RaisePropertyChanged(PropertyChangedEventArgs args)
-        {
-            _reactiveObj.RaisePropertyChanged(args.PropertyName);
-        }
+        public new void RaisePropertyChanged(PropertyChangedEventArgs args) => _reactiveObj.RaisePropertyChanged(args.PropertyName);
 
         /// <inheritdoc />
-        public void RaisePropertyChanging(PropertyChangingEventArgs args)
-        {
-            _reactiveObj.RaisePropertyChanging(args.PropertyName);
-        }
+        public void RaisePropertyChanging(PropertyChangingEventArgs args) => _reactiveObj.RaisePropertyChanging(args.PropertyName);
 
         /// <summary>
         /// Sets the property raising the change event and setting a newer value.

@@ -28,7 +28,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="Prism.Core" Version="7.2.*" />
-    <PackageReference Update="ReactiveUI" Version="11.*" />
+    <PackageReference Update="ReactiveUI" Version="9.*" />
     <PackageReference Update="MvvmCross" Version="8.*" />
     <PackageReference Update="FreshMvvm" Version="4.*" />
   </ItemGroup>
