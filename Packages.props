@@ -21,7 +21,7 @@
     <PackageReference Update="YamlDotNet" Version="11.1.1" />
     <PackageReference Update="Microsoft.Build" Version="16.9.0" />
     <PackageReference Update="Microsoft.Build.Framework" Version="16.9.0" />
-    <PackageReference Update="Microsoft.Build.Tasks.Core" Version="16.9.0" />
+    <PackageReference Update="Microsoft.Build.Tasks.Core" Version="17.3.1" />
     <PackageReference Update="Microsoft.Build.Utilities.Core" Version="16.9.0" />
   </ItemGroup>
   <ItemGroup>
