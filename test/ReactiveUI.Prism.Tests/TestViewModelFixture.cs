@@ -10,6 +10,15 @@ namespace ReactiveUI.Prism.Tests
         private string _name;
         private readonly ObservableAsPropertyHelper<int> _testProperty;
 
+        public TestViewModel()
+        {
+            _testProperty = this.WhenAnyValue(x => x.Name)
+               .Select(_ => 2)
+               .ToProperty(this, x => x.TestProperty);
+
+            TestCommand = ReactiveCommand.CreateFromObservable(ExecuteTest);
+        }
+
         public string Name
         {
             get => _name;
@@ -20,24 +29,13 @@ namespace ReactiveUI.Prism.Tests
 
         public ReactiveCommand<Unit, Unit> TestCommand { get; set; }
 
-        public TestViewModel()
-        {
-            _testProperty = this.WhenAnyValue(x => x.Name)
-                .Select(x => 2)
-                .ToProperty(this, x => x.TestProperty);
-            TestCommand = ReactiveCommand<Unit, Unit>.CreateFromObservable(ExecuteTest);
-        }
-
-        private IObservable<Unit> ExecuteTest()
-        {
-            return Observable.Return(Unit.Default);
-        }
+        private IObservable<Unit> ExecuteTest() => Observable.Return(Unit.Default);
     }
 
     internal class TestViewModelFixture
     {
         public static implicit operator TestViewModel(TestViewModelFixture fixture) => fixture.Build();
 
-        private TestViewModel Build() => new TestViewModel();
+        private TestViewModel Build() => new();
     }
 }

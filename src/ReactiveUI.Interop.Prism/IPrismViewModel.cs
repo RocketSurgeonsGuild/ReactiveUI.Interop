@@ -10,7 +10,6 @@ namespace Rocket.Surgery.ReactiveUI.Interop.Prism
         IReactiveNotifyPropertyChanged<IReactiveObject>,
         IReactiveObject,
         IHandleObservableErrors,
-        INavigationAware,
         IDestructible
     {
     }

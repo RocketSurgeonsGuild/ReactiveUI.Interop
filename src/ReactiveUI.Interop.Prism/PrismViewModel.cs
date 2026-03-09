@@ -1,9 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
-using Prism.Navigation;
 using ReactiveUI;
-using PropertyChangingEventArgs = ReactiveUI.PropertyChangingEventArgs;
-using PropertyChangingEventHandler = ReactiveUI.PropertyChangingEventHandler;
 
 namespace Rocket.Surgery.ReactiveUI.Interop.Prism
 {
@@ -13,36 +10,19 @@ namespace Rocket.Surgery.ReactiveUI.Interop.Prism
     /// <seealso cref="T:ReactiveUI.ReactiveObject" />
     public abstract class PrismViewModel : IPrismViewModel
     {
-        private readonly PrismReactiveObject _reactiveObject = new PrismReactiveObject();
-        private bool _suppressNpc;
+        private readonly PrismReactiveObject _reactiveObject = new();
 
         /// <inheritdoc />
         public virtual void Destroy() { }
 
         /// <inheritdoc />
-        public virtual void OnNavigatedFrom(INavigationParameters parameters) { }
-
-        /// <inheritdoc />
-        public virtual void OnNavigatedTo(INavigationParameters parameters) { }
-
-        /// <inheritdoc />
-        public virtual void OnNavigatingTo(INavigationParameters parameters) { }
-
-        /// <inheritdoc />
         public virtual IDisposable SuppressChangeNotifications()
         {
-            _suppressNpc = true;
-
             var suppressor = _reactiveObject.SuppressChangeNotifications();
 
-            return new DisposableAction(() =>
-            {
-                _suppressNpc = false;
-
-                suppressor.Dispose();
-            });
+            return new DisposableAction(() => suppressor.Dispose());
         }
-        
+
         /// <inheritdoc />
         public IObservable<IReactivePropertyChangedEventArgs<IReactiveObject>> Changing =>
             _reactiveObject.Changing;

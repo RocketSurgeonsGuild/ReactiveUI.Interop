@@ -23,21 +23,18 @@ namespace ReactiveUI.MvvmCross.Tests
         public TestViewModel()
         {
             _testProperty = this.WhenAnyValue(x => x.Name)
-                .Select(x => 2)
+                .Select(_ => 2)
                 .ToProperty(this, x => x.TestProperty);
-            TestCommand = ReactiveCommand<Unit, Unit>.CreateFromObservable(ExecuteTest);
+            TestCommand = ReactiveCommand.CreateFromObservable(ExecuteTest);
         }
 
-        private IObservable<Unit> ExecuteTest()
-        {
-            return Observable.Return(Unit.Default);
-        }
+        private IObservable<Unit> ExecuteTest() => Observable.Return(Unit.Default);
     }
 
     internal class TestViewModelFixture
     {
         public static implicit operator TestViewModel(TestViewModelFixture fixture) => fixture.Build();
 
-        private TestViewModel Build() => new TestViewModel();
+        private TestViewModel Build() => new();
     }
 }
